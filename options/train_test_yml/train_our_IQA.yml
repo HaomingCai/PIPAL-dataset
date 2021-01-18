@@ -1,0 +1,79 @@
+name: LPIPS_Remake_LR1_Alex_OurRegress_AfterAct_onPIPAL
+use_tb_logger: true
+gpu_ids: [1]
+
+#### datasets
+
+datasets:
+  train:
+    # Select Training Data
+    choice: PIPAL  # PIPAL or BAPPS
+
+    train_PIPAL:
+      phase: train
+      name: PIPAL
+      mos_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Label
+      ref_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Ref
+      dist_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Distortion
+      n_workers: 8  # per GPU
+      batch_size: 16
+      crop_flag: true
+      crop_size: 248
+      norm_flag : true
+
+    train_BAPPS:
+      phase: train
+      name: BAPPS
+      train_valid: both
+      train_root : /home/hmcai/home/Dataset/BAPPS/train
+      valid_root : /home/hmcai/home/Dataset/BAPPS/val
+      n_workers: 8  # per GPU
+      batch_size: 16
+      crop_flag: true
+      crop_size: 248
+      norm_flag : true
+
+  val:
+    test_PIPAL_Full:
+      name: PIPAL
+      mode: LQ
+      ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Ref_FullDataset
+      dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Dis_FullDataset
+      mos_path: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/MOS/EloMOSV2.txt
+
+    test_PIPAL_Valid:
+      name: PIPAL
+      mode: LQ
+      ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/Ref_Valid_V2
+      dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/PIPAL_Distortions_V2_Valid
+      mos_path: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/MOS/EloMOSV2_Valid.txt
+
+
+#### network structures
+network_G:
+  FENet: Alex  # Alex or VGG16
+  tune_flag: false
+  bias_flag: true
+  lpips_flag: false
+
+#### path
+path:
+  pretrain_model_G:
+  pretrain_model_R:
+  strict_load: True
+  resume_state:
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_IQA: !!float 1e-4
+  weight_decay_IQA: 0
+  niter: 500000
+  warmup_iter: -1  # no warm up
+  BCE_weight: !!float 1.0
+  manual_seed: 10
+  val_freq: !!float 5e3
+
+#### logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3
