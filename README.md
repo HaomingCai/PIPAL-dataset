@@ -1,2 +1,2 @@
 # PIPAL : Perceptual-IQA-Dataset
-PIPAL Dataset ; IQA-SWD Training Codebase
+Perceptual Image Processing ALgorithms Dataset and Codebase
