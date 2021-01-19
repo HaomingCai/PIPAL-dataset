@@ -8,15 +8,11 @@ from .base_model import BaseModel
 
 logger = logging.getLogger('base')
 
-
 class IQA_Model(BaseModel):
     def __init__(self, opt):
         super(IQA_Model, self).__init__(opt)
 
-        if opt['dist']:
-            self.rank = torch.distributed.get_rank()
-        else:
-            self.rank = -1  # non dist training
+        self.rank = -1  # non dist training
         train_opt = opt['train']
 
         # define network and load pretrained models

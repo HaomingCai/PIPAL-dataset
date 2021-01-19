@@ -1,11 +1,6 @@
-import numpy as np
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-from torch.autograd import Variable
 import torchvision.models as models
-import torchvision.transforms as transforms
-import time
 import torch.nn.parallel
 
 
@@ -33,7 +28,7 @@ class Our_IQA(nn.Module):
         self.c_bias = control_bias
         self.real_lpips = real_lpips
 
-        #### Init All Components
+        # Init All Components
         self.init_feature_extraction()
         self.init_score_regression()
         self.cuda()
@@ -148,19 +143,19 @@ class Our_IQA(nn.Module):
             return score_list
 
     def forward(self, image_ref, image_A):
-        '''Extract Feature A and Feature Ref'''
+        # Extract Feature A and Feature Ref
         fea_ref = self.compute_features(image_ref)
         fea_A = self.compute_features(image_A)
 
-        ''' Feature Ref - Feature A '''
+        # Feature Ref - Feature A
         diff_list = []
         for i in range(self.ddim):
             diff_list.append(fea_ref[i + 1] - fea_A[i + 1])
 
-        '''Regression of Subtraction of  Fea Ref - Fea A '''
+        # Regression of Subtraction of  Fea Ref - Fea A
         score_fea_list = self.compute_score(diff_list)
 
-        '''Average'''
+        # Average
         score_fea = torch.cat(score_fea_list, 1)
         batch_size, score_size, _, _ = score_fea.shape
         score_fea = score_fea.view(batch_size, score_size)

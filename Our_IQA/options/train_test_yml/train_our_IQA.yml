@@ -1,14 +1,15 @@
-name: LPIPS_Remake_LR1_Alex_OurRegress_AfterAct_onPIPAL
+name: LPIPS_Remake_LR1_Alex_OurRegress_AfterAct_onBAPPS
 use_tb_logger: true
-gpu_ids: [1]
+gpu_ids: [0]
 
 #### datasets
-
 datasets:
   train:
-    # Select Training Data
-    choice: PIPAL  # PIPAL or BAPPS
+    # Select PIPAL or BAPPS as Training Data
+    choice: PIPAL
 
+    # Settings for PIPAL
+    # Displace 'mos_root' 'ref_root' 'dist_root' with your own path
     train_PIPAL:
       phase: train
       name: PIPAL
@@ -21,6 +22,7 @@ datasets:
       crop_size: 248
       norm_flag : true
 
+    # Settings for BAPPS
     train_BAPPS:
       phase: train
       name: BAPPS
@@ -34,27 +36,21 @@ datasets:
       norm_flag : true
 
   val:
-    test_PIPAL_Full:
-      name: PIPAL
-      mode: LQ
-      ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Ref_FullDataset
-      dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Dis_FullDataset
-      mos_path: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/MOS/EloMOSV2.txt
-
+    # Displace Validation & Change data_util.py based on your need.
     test_PIPAL_Valid:
       name: PIPAL
-      mode: LQ
-      ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/Ref_Valid_V2
-      dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/PIPAL_Distortions_V2_Valid
-      mos_path: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/MOS/EloMOSV2_Valid.txt
+      mos_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Full_EloMOSV2
+      ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Ref_FullDataset
+      dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Dis_FullDataset
+
 
 
 #### network structures
 network_G:
   FENet: Alex  # Alex or VGG16
-  tune_flag: false
-  bias_flag: true
-  lpips_flag: false
+  tune_flag: false  # Fixed FE or Tunable FE
+  bias_flag: true  # Active bias of conv2d in regression layer
+  lpips_flag: false # Use LPIPS's regression layer
 
 #### path
 path:

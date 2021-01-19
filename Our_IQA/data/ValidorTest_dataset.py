@@ -3,8 +3,6 @@ import torch
 import torch.utils.data as data
 import data.data_util as util
 import torchvision.transforms as transforms
-import cv2
-
 
 class ValidDataset(data.Dataset):
     '''Read LR images only in the test phase.'''

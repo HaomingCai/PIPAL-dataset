@@ -1,27 +1,23 @@
 name: LPIPS_Remake_LR1_VGG16_LPIPSRegress_BeforeAct
 use_tb_logger: true
-gpu_ids: [7]
+gpu_ids: [0]
 
 #### datasets
 datasets:
   test:
     test_PIPAL_Full:
       name: PIPAL
-      mode: LQ
       ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Ref_FullDataset
       dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Dis_FullDataset
-      mos_path: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/MOS/EloMOSV2.txt
-
 
 #### network structures
 network_G:
-  FENet: VGG16  # Alex or VGG16
+  FENet: Alex  # Alex or VGG16
   tune_flag: false
   bias_flag: true
-  lpips_flag: true
-
+  lpips_flag: false
 
 #### path
 path:
-  pretrain_model_G:
+  pretrain_model_G: /home/hmcai/home/PIPAL_IQA_Base/experiments/LPIPS_Remake_LR1_Alex_OurRegress_AfterAct/models/300000_G.pth
   strict_load: True

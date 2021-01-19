@@ -1,11 +1,7 @@
 import os
-import math
-import pickle
 import random
 import numpy as np
-import torch
 import cv2
-import copy
 from itertools import combinations
 
 ####################
@@ -43,24 +39,23 @@ def image_combinations(ref_root, dist_root, mos_root, phase='train', dataset_nam
 
         '''obtain paths of distortions. dict contains 200 list, every list contains different distorted image of one reference '''
         dist_class_Ref = {ref_name: [] for ref_name in ref_fnames}
-        for dirpath, _, fnames in os.walk(dist_root):
+        for root, _, fnames in os.walk(dist_root):
+            fnames = [fname for fname in fnames if is_image_file(fname)]
             for fname in sorted(fnames):
-                if is_image_file(fname):
-                    ref_name = fname.split("_")[0]+img_extension
-                    dist_class_Ref[ref_name].append(fname)
+                ref_name = fname.split("_")[0]+img_extension
+                dist_class_Ref[ref_name].append(fname)
 
         '''obtain MOS score of every distortion img'''
         mos_dict = {}
-        for root, _, fnames in os.walk(mos_root):
-            for fname in fnames:
-                if ".txt" in fname:
-                    mos_path = os.path.join(mos_root,fname)
-                    with open(mos_path, "r") as f_ELO:
-                        lines = f_ELO.readlines()
-                        splited_lines = [dist_score.split(',') for dist_score in lines]
-                        for DisName_ELO in splited_lines:
-                            DisName, dist_ELO = DisName_ELO[0], float(DisName_ELO[1][:-1])
-                            mos_dict[DisName] = dist_ELO
+        mos_fnames = [fname for fname in os.listdir(mos_root) if ".txt" in fname]
+        for fname in mos_fnames:
+            mos_path = os.path.join(mos_root,fname)
+            with open(mos_path, "r") as f_ELO:
+                lines = f_ELO.readlines()
+                splited_lines = [dist_score.split(',') for dist_score in lines]
+                for DisName_ELO in splited_lines:
+                    DisName, dist_ELO = DisName_ELO[0], float(DisName_ELO[1][:-1])
+                    mos_dict[DisName] = dist_ELO
 
         ''' obtain [dist_A, dist_B, ref, real_pro] '''
         pair_combinations = {ref_name: [] for ref_name in ref_fnames}
@@ -88,7 +83,6 @@ def image_combinations(ref_root, dist_root, mos_root, phase='train', dataset_nam
                 names_ref.append(pair[2])
                 dist_A_scores.append(pair[3])
                 dist_B_scores.append(pair[4])
-
         return names_ref, names_dist_A, names_dist_B, dist_A_scores, dist_B_scores
 
 
@@ -262,11 +256,4 @@ def ycbcr2rgb(img):
     return rlt.astype(in_img_type)
 
 
-
-if __name__ == '__main__':
-    ref_root = '/home/jjgu/home/hmcai/IQA_Results/PIPAL/Origins/PIPAL_Origin'
-    dist_root = '/home/jjgu/home/hmcai/IQA_Results/PIPAL/Distortions'
-    mos_root = '/home/jjgu/home/hmcai/IQA_Results/PIPAL/EloMOSV1.txt'
-    phase = 'Train'
-    image_combinations_pipal(ref_root, dist_root, mos_root, phase)
 

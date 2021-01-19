@@ -1,7 +1,5 @@
 import os
 import math
-import time
-import numpy
 import torch
 import random
 import logging
@@ -12,20 +10,19 @@ from models import create_model
 import torch.distributed as dist
 import options.options as option
 import torch.multiprocessing as mp
-from data.data_sampler import DistIterSampler
 from data import create_dataloader, create_dataset
 
 
 
 
-def obtain_MOS_Score(score_path):
-    ELO_path = score_path
+def obtain_MOS_Score(score_root):
     score_list = []
-    with open(ELO_path, 'r') as f:
-        lines = f.readlines()
-        for line in lines:
-            img, score = line.split(',')[0], line.split(',')[1][:-1]
-            score_list.append(float(score))
+    fnames = [fname for fname in os.listdir(score_root) if '.txt' in fname]
+    for fname in sorted(fnames):
+        ELO_path = os.path.join(score_root, fname)
+        with open(ELO_path, 'r') as f:
+            lines = f.readlines()
+            score_list += [float(line.split(',')[1][:-1]) for line in lines]
     return score_list
 
 
@@ -119,14 +116,7 @@ def main():
     torch.backends.cudnn.benckmark = True
 
 
-
-
-
-
-
-
     #### create train and val dataloader
-    dataset_choice = ''
     for phase, dataset_opt in opt['datasets'].items():
         if phase == 'train':
             dataset_choice = dataset_opt['choice']
@@ -161,7 +151,7 @@ def main():
             valid_loaders, valid_MOSs, valid_names = [], [], []
             valid_opts = dataset_opt
             for valid_name, valid_opt in valid_opts.items():
-                valid_MOS = valid_opt['mos_path']
+                valid_MOS = valid_opt['mos_root']
                 valid_set = create_dataset(valid_opt, 'valid')
                 valid_loader = create_dataloader(valid_set, dataset_opt)
                 valid_loaders.append(valid_loader)
@@ -210,8 +200,8 @@ def main():
                 if current_step > total_iters:
                     break
 
-                model.feed_data(train_data)
-                model.optimize_parameters(current_step)
+                # model.feed_data(train_data)
+                # model.optimize_parameters(current_step)
 
                 #### log
                 if current_step % opt['logger']['print_freq'] == 0:
@@ -238,9 +228,9 @@ def main():
 
                 # Validation
                 if current_step % opt['train']['val_freq'] == 0 and rank <= 0:
-                    for valid_name, val_mos_path, val_loader in zip(valid_names, valid_MOSs, valid_loaders):
+                    for valid_name, val_mos_root, val_loader in zip(valid_names, valid_MOSs, valid_loaders):
                         index = 0
-                        MOS_List = obtain_MOS_Score(val_mos_path)
+                        MOS_List = obtain_MOS_Score(val_mos_root)
                         IQA_List = []
                         txt_Fname = os.path.join(opt['path']['val_images'], "{}_{}_iter{}.txt".format(opt['name'], valid_name, current_step))
 
@@ -258,12 +248,12 @@ def main():
                                 f.write(Dist_name + ',' + str(score) + '\n')
                                 IQA_List.append(score)
 
-                        '''Calculate Correlation between MOS and IQA scores'''
+                        # Calculate Correlation between MOS and IQA scores
                         IQA_list_pd = pd.Series(IQA_List)
                         MOS_list_pd = pd.Series(MOS_List)
                         SROCC =  MOS_list_pd.corr(IQA_list_pd, method='spearman')
 
-                        '''Record corr on Tensorboard'''
+                        # Record corr on Tensorboard
                         logger.info('# Validation # {}_SROCC: {:.4e}'.format(valid_name,SROCC))
                         tb_logger.add_scalar('{}_SROCC'.format(valid_name), SROCC, current_step)
 

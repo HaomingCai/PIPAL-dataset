@@ -26,7 +26,6 @@ def create_dataloader(dataset, dataset_opt, opt=None, sampler=None):
 
 
 def create_dataset(dataset_opt, mode):
-    print('in create dataset', dataset_opt)
     dataset = dataset_opt['name']  # BAPPS or PIPAL
 
     if mode == 'train':

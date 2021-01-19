@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="27c0ff5d-cdc7-4fd5-8aa0-7214a0258cc2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YwNmgN7KLIjQZ1eWhecsPF4S18" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/models/modules" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models/modules" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models/modules" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.test">
+    <configuration name="mmlab" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug">
+      <module name="Our_IQA" />
+      <option name="PORT" value="1098" />
+      <option name="HOST" value="localhost" />
+      <PathMappingSettings>
+        <option name="pathMappings">
+          <list />
+        </option>
+      </PathMappingSettings>
+      <option name="REDIRECT_OUTPUT" value="true" />
+      <option name="SUSPEND_AFTER_CONNECT" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="Our_IQA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="data_util" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Our_IQA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/data_util.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Our_IQA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Our_IQA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.data_util" />
+      <item itemvalue="Python.train" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python Remote Debug.mmlab" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.train" />
+        <item itemvalue="Python.data_util" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27c0ff5d-cdc7-4fd5-8aa0-7214a0258cc2" name="Default Changelist" comment="" />
+      <created>1583849856868</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583849856868</updated>
+      <workItem from="1583849858232" duration="27583000" />
+      <workItem from="1584655265982" duration="3761000" />
+      <workItem from="1584695423162" duration="3601000" />
+      <workItem from="1585499075378" duration="1374000" />
+      <workItem from="1585552871434" duration="19148000" />
+      <workItem from="1585703378648" duration="8706000" />
+      <workItem from="1585847632543" duration="159000" />
+      <workItem from="1585904565571" duration="38574000" />
+      <workItem from="1586487738721" duration="5608000" />
+      <workItem from="1588585769765" duration="2749000" />
+      <workItem from="1589989342744" duration="13357000" />
+      <workItem from="1590227077855" duration="555000" />
+      <workItem from="1590587751573" duration="2424000" />
+      <workItem from="1590645169996" duration="14330000" />
+      <workItem from="1591102146312" duration="312000" />
+      <workItem from="1591278782469" duration="495000" />
+      <workItem from="1591544840285" duration="21100000" />
+      <workItem from="1591883089640" duration="668000" />
+      <workItem from="1591929383101" duration="1393000" />
+      <workItem from="1592095704953" duration="75392000" />
+      <workItem from="1592555970836" duration="13323000" />
+      <workItem from="1592875482717" duration="11447000" />
+      <workItem from="1593064395284" duration="865000" />
+      <workItem from="1593157162404" duration="6832000" />
+      <workItem from="1594023412816" duration="4000" />
+      <workItem from="1594110383978" duration="1126000" />
+      <workItem from="1594264652363" duration="9893000" />
+      <workItem from="1595298959849" duration="2427000" />
+      <workItem from="1595505810576" duration="354000" />
+      <workItem from="1596282123574" duration="2209000" />
+      <workItem from="1597653491994" duration="10601000" />
+      <workItem from="1597757211009" duration="6139000" />
+      <workItem from="1598780584200" duration="1114000" />
+      <workItem from="1598786671985" duration="8745000" />
+      <workItem from="1598968969093" duration="941000" />
+      <workItem from="1599057996828" duration="977000" />
+      <workItem from="1599113085347" duration="3973000" />
+      <workItem from="1599262696148" duration="6763000" />
+      <workItem from="1599387459619" duration="12528000" />
+      <workItem from="1599530040480" duration="2673000" />
+      <workItem from="1599790155930" duration="1403000" />
+      <workItem from="1600062622900" duration="397000" />
+      <workItem from="1601212887904" duration="35000" />
+      <workItem from="1601218206498" duration="7000" />
+      <workItem from="1603565682886" duration="69000" />
+      <workItem from="1607516911571" duration="369000" />
+      <workItem from="1608494428170" duration="6740000" />
+      <workItem from="1608639170135" duration="12125000" />
+      <workItem from="1608868022589" duration="2127000" />
+      <workItem from="1609166341455" duration="43000" />
+      <workItem from="1610355354038" duration="1212000" />
+      <workItem from="1610725868828" duration="10000" />
+      <workItem from="1610882305587" duration="659000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="560" y="218" key="#Deployment" timestamp="1610882391614">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="560" y="218" key="#Deployment/0.0.1920.1080/1920.0.2560.1440/-1792.0.1792.1120@0.0.1920.1080" timestamp="1610882391614" />
+    <state x="523" y="226" key="#Deployment/1792.-469.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1608753384545" />
+    <state x="560" y="205" key="#Deployment/1920.0.2560.1440/0.0.1920.1014/-1792.0.1792.1120@0.0.1920.1014" timestamp="1608494492631" />
+    <state x="560" y="205" key="#Options" timestamp="1608709011434">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="560" y="205" key="#Options/0.0.1920.1080/1920.0.2560.1440/-1792.0.1792.1120@0.0.1920.1080" timestamp="1608709011434" />
+    <state x="100" y="100" width="1720" height="880" key="DirDiffDialog" timestamp="1610882587253">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="DirDiffDialog/0.0.1920.1080/1920.0.2560.1440/-1792.0.1792.1120@0.0.1920.1080" timestamp="1610882587253" />
+    <state x="2791" y="496" key="com.intellij.ide.util.TipDialog" timestamp="1610882307045">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2791" y="496" key="com.intellij.ide.util.TipDialog/0.0.1920.1003/1920.0.2560.1440/-1792.0.1792.1120@0.0.1920.1003" timestamp="1610882307045" />
+    <state x="653" y="372" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.2560.1440/-1792.0.1792.1120@0.0.1920.1080" timestamp="1608868024034" />
+    <state x="653" y="372" key="com.intellij.ide.util.TipDialog/1920.0.2560.1440/0.0.1920.1080/-1792.0.1792.1120@0.0.1920.1080" timestamp="1609166342091" />
+    <state x="867" y="290" width="363" height="525" key="ftp.server.browser" timestamp="1610882382980">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="867" y="290" width="363" height="525" key="ftp.server.browser/0.0.1920.1080/1920.0.2560.1440/-1792.0.1792.1120@0.0.1920.1080" timestamp="1610882382980" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Our_IQA$train.coverage" NAME="train Coverage Results" MODIFIED="1584699092439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Our_IQA$data_util.coverage" NAME="data_util Coverage Results" MODIFIED="1583893267356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/Our_IQA$test.coverage" NAME="test Coverage Results" MODIFIED="1585591265564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
