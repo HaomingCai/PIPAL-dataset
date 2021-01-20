@@ -200,8 +200,8 @@ def main():
                 if current_step > total_iters:
                     break
 
-                # model.feed_data(train_data)
-                # model.optimize_parameters(current_step)
+                model.feed_data(train_data)
+                model.optimize_parameters(current_step)
 
                 #### log
                 if current_step % opt['logger']['print_freq'] == 0:

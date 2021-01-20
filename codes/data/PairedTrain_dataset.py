@@ -86,10 +86,6 @@ class PIPALDataset(data.Dataset):
         return len(self.ref_name)
 
 
-
-
-
-
 ''' Train IQA on BAPPS dataset'''
 class BAPPSDataset(data.Dataset):
     def __init__(self, opt):

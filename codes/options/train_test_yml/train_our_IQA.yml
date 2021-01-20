@@ -1,6 +1,6 @@
-name: LPIPS_Remake_LR1_Alex_OurRegress_AfterAct_onBAPPS
+name: LPIPS_Remake_LR1_Alex_OurRegress_AfterAct_onPIPAL_TrainV1_LR1
 use_tb_logger: true
-gpu_ids: [0]
+gpu_ids: [3]
 
 #### datasets
 datasets:
@@ -13,9 +13,12 @@ datasets:
     train_PIPAL:
       phase: train
       name: PIPAL
-      mos_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Label
-      ref_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Ref
-      dist_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Distortion
+#      mos_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Label
+#      ref_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Ref
+#      dist_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Distortion
+      mos_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Full_EloMOSV2
+      ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/Ref_Train_V2
+      dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/PIPAL_Distortions_V2_Train
       n_workers: 8  # per GPU
       batch_size: 16
       crop_flag: true
@@ -26,7 +29,7 @@ datasets:
     train_BAPPS:
       phase: train
       name: BAPPS
-      train_valid: both
+      train_valid: both # both or train or valid | Decide which part of BAPPS dataset you want to use.
       train_root : /home/hmcai/home/Dataset/BAPPS/train
       valid_root : /home/hmcai/home/Dataset/BAPPS/val
       n_workers: 8  # per GPU
@@ -37,11 +40,17 @@ datasets:
 
   val:
     # Displace Validation & Change data_util.py based on your need.
-    test_PIPAL_Valid:
+    test_PIPAL_Full:
       name: PIPAL
       mos_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Full_EloMOSV2
       ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Ref_FullDataset
       dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Dis_FullDataset
+
+    test_PIPAL_Valid:
+      name: PIPAL
+      mos_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/MOS/Validv1_EloMOSV2
+      ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/Ref_Valid_V2
+      dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/PIPAL_Distortions_V2_Valid
 
 
 

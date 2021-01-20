@@ -38,16 +38,12 @@ class Our_IQA(nn.Module):
             self.FE = models.vgg16(pretrained=True).features
             self.fea_dims = [64, 128, 256, 512, 512]
             self.ddim = 5
-            # self.hooks = [(0, 3), (3, 8), (8, 15), (15, 22), (22, 29)]  # Before Activation
             self.hooks = [(0, 4), (4, 9), (9, 16), (16, 23), (23, 30)]  # Before MaxPool, After Activation
-            # self.hooks = [(0, 5), (5, 10), (10, 17), (17, 24), (24, 31)] # After MaxPool
         elif self.FENet == 'Alex':
             self.FE = models.alexnet(pretrained=True).features
             self.fea_dims = [64, 192, 384, 256, 256]
             self.ddim = 5
-            # self.hooks = [(0, 1), (1, 4), (4, 7), (7, 9), (9, 11)]  # Before Activation
             self.hooks = [(0, 2), (2, 5), (5, 8), (8, 10), (10, 12)]  # Before MaxPool
-            # self.hooks = [(0, 3), (3, 6), (6, 8), (8, 10), (10, 13)] # After MaxPool
         else:
             raise Exception('Wrong Feature Extractor')
 
