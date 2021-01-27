@@ -1,4 +1,4 @@
-# PIPAL: Perceptual IQA Dataset and Codebase
+# Perceptual IQA Dataset (PIPAL) and Codebase
 
 ## PIPAL: a Large-Scale Image Quality Assessment Dataset for Perceptual Image Restoration
 <a href="https://www.jasongt.com" target="_blank">Jinjin Gu</a>, 
@@ -12,14 +12,20 @@
 - [ECCV 2020 Paper](https://arxiv.org/abs/2007.12142) | [Project Web](https://www.jasongt.com/projectpages/pipal.html) | [NTIRE 2021 Challenge](https://competitions.codalab.org/competitions/28050).
 - Any questions, please contact with haomingcai@link.cuhk.edu.cn
 
+## 🧭  Download PIPAL
+- <b>PIPAL : NTIRE 2021 Train</b> [[Google Drive]](https://drive.google.com/drive/folders/1G4fLeDcq6uQQmYdkjYUHhzyel4Pz81p-) 
+- <b>PIPAL : NTIRE 2021 Valid</b> [[Google Drive]](https://drive.google.com/drive/folders/1w0wFYHj8iQ8FgA9-YaKZLq7HAtykckXn) 
+- <b>PIPAL : NTIRE 2021 Test</b>  [2020-03-01]
+
+
 <p align="center">
 <img src="figures/comparison.png" >
 </p>
 
 ## 🔥 Important Notes [ 2021-01-25 ] 
-- We are organizing <font color='orange'>NTIRE 2021 Perceptual IQA Challenge !! </font>. Find more in [NTIRE 2021 Challenge](https://competitions.codalab.org/competitions/28050).
-- For now, our codebase <font color='red'> ONLY </font> support users to <font color='red'>train LPIPS on PIPAL or BAPPS</font> for now.
-- <font color='orange'>The SWD module will be added in the future</font>.
+- We are organizing [***NTIRE 2021 Perceptual IQA Challenge !!***](https://competitions.codalab.org/competitions/28050).
+
+- ❗️ ❗️ This codebase  ***ONLY*** support users to train LPIPS on PIPAL or BAPPS for now. The SWD module will be added ***in the future***.
 
 ## 🔧 Dependencies and Installation
 - Python 3 (Recommend to use [Anaconda](https://www.anaconda.com/download/#linux))

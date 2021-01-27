@@ -8,7 +8,7 @@
 
 
 ## How To Prepare Training Data
-1. BAPPS 2afc dataset. Download using [BAPPS offical script](https://data.vision.ee.ethz.ch/cvl/DIV2K/).
+1. BAPPS 2afc dataset. Download using [BAPPS offical script](https://github.com/richzhang/PerceptualSimilarity/blob/master/scripts/download_dataset.sh).
 > Modify configurations in `codes/options/train_test_yml/train_our_IQA.yml` when training, e.g., `train_root`, `valid_root` and `train_valid` (Choose which part of BAPPS 2afc dataset become training data).
 
 2. PIPAL dataset. Download [Training](https://drive.google.com/drive/folders/1G4fLeDcq6uQQmYdkjYUHhzyel4Pz81p-), [Validation](https://drive.google.com/drive/folders/1w0wFYHj8iQ8FgA9-YaKZLq7HAtykckXn) and [Testing (2021-03-01)]().
