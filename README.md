@@ -39,8 +39,8 @@
 ## 💻 How to Train
 - **Your IQA**
 	1. Prepare IQA dataset PIPAL public training [NTIRE 2021] or BAPPS. More details are in [`codes/data`](codes/data/README.md).
-    1. Modify the dataset format based on your need in [`codes/data/PairedTrain_dataset.py`](codes/data/PairedTrain_dataset.py) and [`ValidorTest_dataset.py`](ValidorTest_dataset.py)
-	1. Modify the configuration file [`codes/options/train_test_yml/train_our_IQA.yml`](codes/options/train_test_yml/train_our_IQA.yml)
+    1. Modify the dataset format based on your need in [`codes/data/PairedTrain_dataset.py`](codes/data/PairedTrain_dataset.py) and [`ValidorTest_dataset.py`](codes/data/ValidorTest_dataset.py)
+	1. Modify the configuration file [`codes/options/train_test_yml/train_our_IQA.yml`](codes/options/train_test_yml/train_IQA.yml)
 	1. Run command:
 	```c++
 	python train.py -opt options/train_test_yml/train_IQA.yml
@@ -50,7 +50,7 @@
 ## 📈 How to Test
 - **Prepare the test dataset**
 	1. Prepare IQA dataset PIPAL public validation [NTIRE 2021]. More details are in [`codes/data`](codes/data/README.md).
-	1. Modify the dataset format based on your need in [`ValidorTest_dataset.py`](ValidorTest_dataset.py)
+	1. Modify the dataset format based on your need in [`ValidorTest_dataset.py`](codes/data/ValidorTest_dataset.py)
 	1. Modify the configuration file [`codes/options/train_test_yml/test_IQA.yml`](codes/options/train_test_yml/test_IQA.yml)
 	1. Run command:
 	```c++
