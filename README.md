@@ -9,7 +9,7 @@
 <a href="http://xpixel.group/2010/01/20/chaodong.html" target="_blank">Chao Dong</a>. In ECCV, 2020.
 
 ## 🧭  Navigation
-- [ECCV 2020 Paper]() | [Project Web]() | [NTIRE 2021 Challenge](https://competitions.codalab.org/competitions/28050).
+- [ECCV 2020 Paper](https://arxiv.org/abs/2007.12142) | [Project Web](https://www.jasongt.com/projectpages/pipal.html) | [NTIRE 2021 Challenge](https://competitions.codalab.org/competitions/28050).
 - Any questions, please contact with haomingcai@link.cuhk.edu.cn
 
 <p align="center">
