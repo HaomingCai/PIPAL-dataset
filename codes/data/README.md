@@ -24,7 +24,7 @@
 ```  
 PIPAL
    │   
-   └───validation (Coming soon)
+   └───validation (Public)
    │   |
    │   └───Reference_valid
    │   │     |A0000.bmp
