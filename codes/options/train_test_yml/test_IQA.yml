@@ -1,4 +1,4 @@
-name: Testing22222
+name: LPIPS-Alex_TonPIPAL
 use_tb_logger: true
 gpu_ids: [7]
 
@@ -7,9 +7,8 @@ datasets:
   test:
     test_PIPAL_Full:
       name: PIPAL
-      mos_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Full_EloMOSV2
-      ref_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Remake_Full_Ref
-      dist_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Remake_Full_Dis
+      ref_root: /home/hmcai/home/PIPAL_NTIRE_Valid/Ref
+      dist_root: /home/hmcai/home/PIPAL_NTIRE_Valid/Dis
 
 #### network structures
 network_G:
@@ -20,5 +19,5 @@ network_G:
 
 #### path
 path:
-  pretrain_model_G: /home/hmcai/home/PIPAL_IQA_Base/experiments/LPIPS-Alex_TonPIPAL_ClampOld/models/2000_G.pth
+  pretrain_model_G: /home/hmcai/home/PIPAL_IQA_Base/pretrained/latest_G.pth
   strict_load: True

@@ -47,7 +47,7 @@ datasets:
 
     test_PIPAL_Valid:
       name: PIPAL
-      mos_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/MOS/Validv1_EloMOSV2
+      mos_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/MOS/Valid_EloMOSV2
       ref_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Remake_Valid_Ref
       dist_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Remake_Valid_Dis
 
