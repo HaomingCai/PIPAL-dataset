@@ -8,24 +8,23 @@
 <a href="http://www.jimmyren.com" target="_blank">Jimmy S.Ren</a>, 
 <a href="http://xpixel.group/2010/01/20/chaodong.html" target="_blank">Chao Dong</a>. In ECCV, 2020.
 
+## 🔥 Important Notes [ 2021-01-25 ] 
+- We are organizing [***NTIRE 2021 Perceptual IQA Challenge !!***](https://competitions.codalab.org/competitions/28050).
+
+- ❗️ ❗️ This codebase  ***ONLY*** support users to train LPIPS on PIPAL or BAPPS for now. The SWD module will be added ***in the future***.
 ## 🧭  Navigation
 - [ECCV 2020 Paper](https://arxiv.org/abs/2007.12142) | [Project Web](https://www.jasongt.com/projectpages/pipal.html) | [NTIRE 2021 Challenge](https://competitions.codalab.org/competitions/28050).
 - Any questions, please contact with haomingcai@link.cuhk.edu.cn
 
-## 🧭  Download PIPAL
-- <b>PIPAL : NTIRE 2021 Train</b> [[Google Drive]](https://drive.google.com/drive/folders/1G4fLeDcq6uQQmYdkjYUHhzyel4Pz81p-) 
-- <b>PIPAL : NTIRE 2021 Valid</b> [[Google Drive]](https://drive.google.com/drive/folders/1w0wFYHj8iQ8FgA9-YaKZLq7HAtykckXn) 
-- <b>PIPAL : NTIRE 2021 Test</b>  [2020-03-01]
+## 📦   Download PIPAL NTIRE 2021
+- ***Train*** [[Google Drive]](https://drive.google.com/drive/folders/1G4fLeDcq6uQQmYdkjYUHhzyel4Pz81p-) 
+- ***Valid*** [[Google Drive]](https://drive.google.com/drive/folders/1w0wFYHj8iQ8FgA9-YaKZLq7HAtykckXn) 
+- ***Test [Coming Soon]***
 
 
 <p align="center">
 <img src="figures/comparison.png" >
 </p>
-
-## 🔥 Important Notes [ 2021-01-25 ] 
-- We are organizing [***NTIRE 2021 Perceptual IQA Challenge !!***](https://competitions.codalab.org/competitions/28050).
-
-- ❗️ ❗️ This codebase  ***ONLY*** support users to train LPIPS on PIPAL or BAPPS for now. The SWD module will be added ***in the future***.
 
 ## 🔧 Dependencies and Installation
 - Python 3 (Recommend to use [Anaconda](https://www.anaconda.com/download/#linux))
