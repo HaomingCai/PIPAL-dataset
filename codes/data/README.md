@@ -19,7 +19,7 @@
 <br/> When you want to test your model. Modify configurations in `codes/options/train_test_yml/test_IQA.yml` when testing, e.g., `ref_root` and `dis_root`.
 
 3. The ideal file structure is shown below.
-> Important! The "Distortion" file should only contains four subfiles described here. Otherwise, you should modify function [image_combinations](codes/data/data_util.py) in [codes/data/data_util.py](codes/data/data_util.py).
+> Important! The "Distortion" file should only contains four subfiles described here. Otherwise, you should modify function [image_combinations](data/data_util.py) in [codes/data/data_util.py](data/data_util.py).
 
 ```  
 PIPAL
