@@ -11,7 +11,6 @@ class ValidDataset(data.Dataset):
         super(ValidDataset, self).__init__()
         # General Setting
         self.opt = opt
-        self.norm_flag = self.opt['norm_flag']
         self.normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                               std=[0.229, 0.224, 0.225])
 
@@ -48,9 +47,8 @@ class ValidDataset(data.Dataset):
         img_dist = torch.from_numpy(np.ascontiguousarray(np.transpose(img_dist, (2, 0, 1)))).float()
 
         # Choose whether do Normalization
-        if self.norm_flag:
-            img_ref = self.normalize(img_ref)
-            img_dist = self.normalize(img_dist)
+        img_ref = self.normalize(img_ref)
+        img_dist = self.normalize(img_dist)
 
         return {'Ref': img_ref, 'Distortion': img_dist, 'Dis_Name': distortion_name
                 }

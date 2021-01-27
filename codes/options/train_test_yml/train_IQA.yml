@@ -1,6 +1,6 @@
-name: LPIPS_Remake_LR1_Alex_OurRegress_AfterAct_onPIPAL_TrainV1_LR1
+name: LPIPS-Alex_TonPIPAL_ClampOld
 use_tb_logger: true
-gpu_ids: [3]
+gpu_ids: [2]
 
 #### datasets
 datasets:
@@ -13,12 +13,9 @@ datasets:
     train_PIPAL:
       phase: train
       name: PIPAL
-#      mos_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Label
-#      ref_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Ref
-#      dist_root: /home/hmcai/home/Dataset/PIPAL/NTIRE_Partition/Train_Distortion
-      mos_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Full_EloMOSV2
-      ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/Ref_Train_V2
-      dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/PIPAL_Distortions_V2_Train
+      mos_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Full_EloMOSV2
+      ref_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Remake_Train_Ref
+      dist_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Remake_Train_Dis
       n_workers: 8  # per GPU
       batch_size: 16
       crop_flag: true
@@ -26,6 +23,8 @@ datasets:
       norm_flag : true
 
     # Settings for BAPPS
+    # Displace 'train_root' 'valid_root'
+    # Choose 'both' or 'train' or 'valid' for 'train_valid'
     train_BAPPS:
       phase: train
       name: BAPPS
@@ -43,14 +42,14 @@ datasets:
     test_PIPAL_Full:
       name: PIPAL
       mos_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Full_EloMOSV2
-      ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Ref_FullDataset
-      dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/FullDataset/Dis_FullDataset
+      ref_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Remake_Full_Ref
+      dist_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Remake_Full_Dis
 
     test_PIPAL_Valid:
       name: PIPAL
       mos_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/MOS/Validv1_EloMOSV2
-      ref_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/Ref_Valid_V2
-      dist_root: /home/hmcai/home/Dataset/PIPAL/PIPAL_Partition/PartitionDataset/PIPAL_Distortions_V2_Valid
+      ref_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Remake_Valid_Ref
+      dist_root: /home/hmcai/home/PIPAL_SWD_Remake/Remake_Dataset/PIPAL/Remake_Valid_Dis
 
 
 
@@ -72,13 +71,13 @@ path:
 train:
   lr_IQA: !!float 1e-4
   weight_decay_IQA: 0
-  niter: 500000
+  niter: 400000
   warmup_iter: -1  # no warm up
-  BCE_weight: !!float 1.0
+  loss_weight: !!float 1.0
   manual_seed: 10
-  val_freq: !!float 5e3
+  val_freq: !!float 2e3
 
 #### logger
 logger:
-  print_freq: 100
-  save_checkpoint_freq: !!float 5e3
+  print_freq: 50
+  save_checkpoint_freq: !!float 2e3

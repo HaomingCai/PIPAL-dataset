@@ -11,7 +11,7 @@
 1. BAPPS 2afc dataset. Download using [BAPPS offical script](https://data.vision.ee.ethz.ch/cvl/DIV2K/).
 > Modify configurations in `codes/options/train_test_yml/train_our_IQA.yml` when training, e.g., `train_root`, `valid_root` and `train_valid` (Choose which part of BAPPS 2afc dataset become training data).
 
-2. PIPAL dataset. Download [Training](https://data.vision.ee.ethz.ch/cvl/DIV2K/), [Validation (Coming Soon)](https://data.vision.ee.ethz.ch/cvl/DIV2K/) and [Testing (Coming soon)]().
+2. PIPAL dataset. Download [Training](https://drive.google.com/drive/folders/1G4fLeDcq6uQQmYdkjYUHhzyel4Pz81p-), [Validation](https://drive.google.com/drive/folders/1w0wFYHj8iQ8FgA9-YaKZLq7HAtykckXn) and [Testing (2021-03-01)]().
 > For PIPAL training dataset, you could obtain four files named Distortion_1, Distortion_2, Distortion_3 and Distortion_4. Please create one file which only contains these four subfiles.
 <br/> Modify configurations in `codes/options/train_test_yml/train_our_IQA.yml` when training, e.g., `mos_root`, `ref_root` and `dis_root`.
 

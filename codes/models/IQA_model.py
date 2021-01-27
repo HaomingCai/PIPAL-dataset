@@ -27,7 +27,7 @@ class IQA_Model(BaseModel):
             self.netIQA.train()
 
             # weight of loss
-            self.l_rank_w = train_opt['BCE_weight']
+            self.l_weight = train_opt['loss_weight']
 
             # optimizers
             optim_params = []
@@ -63,7 +63,7 @@ class IQA_Model(BaseModel):
         # Predict perceptual judgment h from distance pair (d0, d1). See Paper of LPIPS.
         B, _ = predict_pro_Ref_A.shape
         var_judge = self.probability_AB.view(predict_pro_Ref_A.size())
-        self.loss = self.l_rank_w * (
+        self.loss = self.l_weight * (
             self.rankLoss.forward(predict_pro_Ref_A, predict_pro_Ref_B, var_judge * 2. - 1.)
         )
 
@@ -82,9 +82,11 @@ class IQA_Model(BaseModel):
         self.netIQA.train()
 
     def clamp_weights(self):
+        index = 0
         for module in self.netIQA.modules():
             try:
                 if (hasattr(module, 'weight') and module.kernel_size == (1, 1)):
+                    index += 1
                     module.weight.data = torch.clamp(module.weight.data, min=0)
             except:
                 pass

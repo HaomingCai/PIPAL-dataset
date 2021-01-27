@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torchvision.models as models
 import torch.nn.parallel
+import models.modules.module_util as module_util
 
 
 class NetLinLayer(nn.Module):
@@ -73,13 +74,13 @@ class Our_IQA(nn.Module):
             self.lin3 = NetLinLayer(self.fea_dims[3], use_dropout=True)
             self.lin4 = NetLinLayer(self.fea_dims[4], use_dropout=True)
         else:
-            self.regression_models = []
             self.regreassion_mine_1 = nn.Sequential(
                 nn.Conv2d(self.fea_dims[0], self.fea_dims[0], 1, bias=self.c_bias),
                 nn.ReLU(),
                 nn.Conv2d(self.fea_dims[0], 1, 1, bias=self.c_bias),
                 nn.ReLU(),
                 nn.AdaptiveAvgPool2d((1, 1)))
+
 
             self.regreassion_mine_2 = nn.Sequential(
                 nn.Conv2d(self.fea_dims[1], self.fea_dims[1], 1, bias=self.c_bias),

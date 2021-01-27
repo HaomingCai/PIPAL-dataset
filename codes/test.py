@@ -15,7 +15,6 @@ def main():
     parser.add_argument('-opt', type=str, required=True, help='Path to options YMAL file.')
     args = parser.parse_args()
     opt = option.parse(args.opt, is_train=False)
-    # opt = option.parse('/home/jjgu/home/hmcai/MyPyCharm_Pro/PIPAL/Our_IQA/options/test/test_IQA.yml', is_train=False)
     opt = option.dict_to_nonedict(opt)
 
     util.mkdirs(

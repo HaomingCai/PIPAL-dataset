@@ -16,13 +16,15 @@ from data import create_dataloader, create_dataset
 
 
 def obtain_MOS_Score(score_root):
-    score_list = []
+    score_list = {}
     fnames = [fname for fname in os.listdir(score_root) if '.txt' in fname]
     for fname in sorted(fnames):
         ELO_path = os.path.join(score_root, fname)
         with open(ELO_path, 'r') as f:
             lines = f.readlines()
-            score_list += [float(line.split(',')[1][:-1]) for line in lines]
+            for line in lines:
+                img_name, img_MOS = line.split(',')[0], float(line.split(',')[1][:-1])
+                score_list[img_name] = img_MOS
     return score_list
 
 
@@ -230,8 +232,8 @@ def main():
                 if current_step % opt['train']['val_freq'] == 0 and rank <= 0:
                     for valid_name, val_mos_root, val_loader in zip(valid_names, valid_MOSs, valid_loaders):
                         index = 0
-                        MOS_List = obtain_MOS_Score(val_mos_root)
-                        IQA_List = []
+                        MOS_dict = obtain_MOS_Score(val_mos_root)
+                        IQA_List,MOS_List = [], []
                         txt_Fname = os.path.join(opt['path']['val_images'], "{}_{}_iter{}.txt".format(opt['name'], valid_name, current_step))
 
                         logger.info('Validation Testing, Please Wait')
@@ -247,6 +249,7 @@ def main():
                                 Dist_name = val_data['Dis_Name'][0].split('/')[-1]
                                 f.write(Dist_name + ',' + str(score) + '\n')
                                 IQA_List.append(score)
+                                MOS_List.append(MOS_dict[Dist_name])
 
                         # Calculate Correlation between MOS and IQA scores
                         IQA_list_pd = pd.Series(IQA_List)
