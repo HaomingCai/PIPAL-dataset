@@ -1,4 +1,4 @@
-name: LPIPS-Alex_TonPIPAL_ClampOld
+name: LPIPS-Alex_TonPIPAL
 use_tb_logger: true
 gpu_ids: [2]
 
