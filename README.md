@@ -14,7 +14,7 @@
 - ❗️ ❗️ This codebase  ***ONLY*** support users to train LPIPS on PIPAL or BAPPS for now. The SWD module will be added ***in the future***.
 ## 🧭  Navigation
 - [ECCV 2020 Paper](https://arxiv.org/abs/2007.12142) | [Project Web](https://www.jasongt.com/projectpages/pipal.html) | [NTIRE 2021 Challenge](https://competitions.codalab.org/competitions/28050).
-- Any questions, please contact with haomingcai@link.cuhk.edu.cn
+- If you have any questions, please contact with haomingcai@link.cuhk.edu.cn
 
 ## 📦   Download PIPAL NTIRE 2021
 - ***Train*** [[Google Drive]](https://drive.google.com/drive/folders/1G4fLeDcq6uQQmYdkjYUHhzyel4Pz81p-) 
