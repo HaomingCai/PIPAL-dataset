@@ -28,7 +28,6 @@ def main():
     test_loaders, test_names = [],[]
     for phase, dataset_opt in opt['datasets'].items():
         for test_name, test_opt in dataset_opt.items():
-            test_MOS = test_opt['mos_path']
             test_set = create_dataset(test_opt, 'valid')
             test_loader = create_dataloader(test_set, dataset_opt)
             test_loaders.append(test_loader)
