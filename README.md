@@ -8,13 +8,14 @@
 <a href="http://www.jimmyren.com" target="_blank">Jimmy S.Ren</a>, 
 <a href="http://xpixel.group/2010/01/20/chaodong.html" target="_blank">Chao Dong</a>. ***In ECCV, 2020***.
 
-- [ECCV 2020 Paper](https://arxiv.org/abs/2007.12142) | [Project Web](https://www.jasongt.com/projectpages/pipal.html) | [NTIRE 2021 Challenge](https://competitions.codalab.org/competitions/28050).
+- [ECCV 2020 Paper](https://arxiv.org/abs/2007.12142) | [Journal Version](https://arxiv.org/abs/2011.15002) | [Project Web](https://www.jasongt.com/projectpages/pipal.html) | [NTIRE 2021 Challenge](https://competitions.codalab.org/competitions/28050).
 - If you have any questions, please contact with haomingcai@link.cuhk.edu.cn
 
-## 🔥 Important Notes [ 2021-01-25 ] 
-- We are organizing [***NTIRE 2021 Perceptual IQA Challenge !!***](https://competitions.codalab.org/competitions/28050).
+## 🔥 Important Notes [ 2022-Jan-02 ] 
+- [2022-Jan-02] Update the README. I will recorrect those errors mentioned in the issues recently. Moreover, we will extend the PIPAL dataset with more degradations for the NTIRE 2022 (We are still waiting for further notes from the NTIRE organizer).
+- [2021-Feb] We are organizing [***NTIRE 2021 Perceptual IQA Challenge !!***](https://competitions.codalab.org/competitions/28050).
 
-- ❗️ ❗️ This codebase  ***ONLY*** supports users to train LPIPS on PIPAL or BAPPS for now. The SWD module will be added ***in the future***.
+- [2021-Feb] ❗️ ❗️ This codebase  ***ONLY*** supports users to train LPIPS on PIPAL or BAPPS for now. The SWD module will be added ***in the future***.
 
 <!-- ## 🧭  Navigation
 - [ECCV 2020 Paper](https://arxiv.org/abs/2007.12142) | [Project Web](https://www.jasongt.com/projectpages/pipal.html) | [NTIRE 2021 Challenge](https://competitions.codalab.org/competitions/28050).
