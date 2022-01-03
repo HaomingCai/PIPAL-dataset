@@ -3,7 +3,7 @@
 ## PIPAL: a Large-Scale Image Quality Assessment Dataset for Perceptual Image Restoration
 <a href="https://www.jasongt.com" target="_blank">Jinjin Gu</a>, 
 <a href="http://www.haomingcai.com" target="_blank">Haoming Cai</a>, 
-<a>Haoyu Chen</a>, 
+<a href="chenhaoyu.com" target="_blank">Haoyu Chen</a>,
 <a>Xiaoxing ye</a>, 
 <a href="http://www.jimmyren.com" target="_blank">Jimmy S.Ren</a>, 
 <a href="http://xpixel.group/2010/01/20/chaodong.html" target="_blank">Chao Dong</a>. ***In ECCV, 2020***.
